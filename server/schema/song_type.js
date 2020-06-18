@@ -13,6 +13,7 @@ const SongType = new GraphQLObjectType({
       type: new GraphQLList(LyricType),
       resolve(parentValue) {
         return Song.findLyrics(parentValue.id);
+        // return Song.includes(parentValue.id)
       }
     }
   })
