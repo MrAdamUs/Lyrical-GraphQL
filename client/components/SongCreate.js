@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import gql from 'graphql-tag';
+import mutation from '../../server/schema/mutations';
+
 
 class SongCreate extends Component {
     constructor(props) {
@@ -9,6 +12,7 @@ class SongCreate extends Component {
 
     onSubmit (e) {
         e.preventDefault();
+        
     }
 
 
@@ -25,5 +29,13 @@ class SongCreate extends Component {
         )
     }
 }
+
+
+const mutation = gql`
+    mutaiton {
+        addSong(title: )
+    }
+
+`;
 
 export default SongCreate;
